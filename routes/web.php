@@ -2,16 +2,16 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
-use App\Http\Controllers\PageController;
+// use App\Http\Controllers\PageController;
 // use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\AboutController;
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\Prak3\HomeController as DashboardController;
-use App\Http\Controllers\Prak3\ProductsController;
-use App\Http\Controllers\Prak3\NewsController;
-use App\Http\Controllers\Prak3\ProgramController;
-use App\Http\Controllers\Prak3\AboutController as AboutUsController;
-use Illuminate\Routing\Route as RoutingRoute;
+// use App\Http\Controllers\ArticleController;
+// use App\Http\Controllers\Prak3\HomeController as DashboardController;
+// use App\Http\Controllers\Prak3\ProductsController;
+// use App\Http\Controllers\Prak3\NewsController;
+// use App\Http\Controllers\Prak3\ProgramController;
+// use App\Http\Controllers\Prak3\AboutController as AboutUsController;
+// use Illuminate\Routing\Route as RoutingRoute;
 use App\Http\Controllers\sock\HomeController;
 use App\Http\Controllers\sock\AboutController;
 use App\Http\Controllers\sock\TestmonialController;

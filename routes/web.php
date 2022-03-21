@@ -1,22 +1,26 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\Route as RoutingRoute;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\PageController;
-// use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\AboutController;
 // use App\Http\Controllers\ArticleController;
+
 // use App\Http\Controllers\Prak3\HomeController as DashboardController;
 // use App\Http\Controllers\Prak3\ProductsController;
 // use App\Http\Controllers\Prak3\NewsController;
 // use App\Http\Controllers\Prak3\ProgramController;
 // use App\Http\Controllers\Prak3\AboutController as AboutUsController;
-// use Illuminate\Routing\Route as RoutingRoute;
-use App\Http\Controllers\sock\HomeController;
-use App\Http\Controllers\sock\AboutController;
-use App\Http\Controllers\sock\TestmonialController;
-use App\Http\Controllers\sock\ClientsController;
-use App\Http\Controllers\sock\ContactController;
+
+// use App\Http\Controllers\sock\HomeController;
+// use App\Http\Controllers\sock\AboutController;
+// use App\Http\Controllers\sock\TestmonialController;
+// use App\Http\Controllers\sock\ClientsController;
+// use App\Http\Controllers\sock\ContactController;
+
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +33,9 @@ use App\Http\Controllers\sock\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/hello', function () {
 //     return 'Hello World';
@@ -78,19 +82,19 @@ Route::get('/', function () {
 // Route::get('/about', [AboutUsController::class, 'about']);
 
 
-
-
-// Auth::routes();
+// //Home
+// Route::get('/', [HomeController::class, 'index']);
+// //About
+// Route::get('/about', [AboutController::class, 'about']);
+// //Testmonial
+// Route::get('/testmonial', [TestmonialController::class, 'testmonial']);
+// //Cliets
+// Route::get('/clients', [ClientsController::class, 'clients']);
+// //Contact
+// Route::get('/contact', [ContactController::class, 'contact']);
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Home
-Route::get('/', [HomeController::class, 'index']);
-//About
-Route::get('/about', [AboutController::class, 'about']);
-//Testmonial
-Route::get('/testmonial', [TestmonialController::class, 'testmonial']);
-//Cliets
-Route::get('/clients', [ClientsController::class, 'clients']);
-//Contact
-Route::get('/contact', [ContactController::class, 'contact']);
+
+Auth::routes();
+Route::get('/', [HomeController::class,'index']);

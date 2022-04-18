@@ -1,9 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Routing\Route as RoutingRoute;
-use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\WelcomeController;
+use Illuminate\Routing\Route as RoutingRoute;
 // use App\Http\Controllers\PageController;
 // use App\Http\Controllers\AboutController;
 // use App\Http\Controllers\ArticleController;
@@ -20,7 +22,7 @@ use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\sock\ClientsController;
 // use App\Http\Controllers\sock\ContactController;
 
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ArticlesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -98,3 +100,5 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 Route::get('/', [HomeController::class,'index']);
+
+Route::resource('articles', ArticlesController::class);

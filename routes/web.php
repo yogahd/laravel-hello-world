@@ -102,3 +102,4 @@ Auth::routes();
 Route::get('/', [HomeController::class,'index']);
 
 Route::resource('articles', ArticlesController::class);
+Route::get('/article/cetak_pdf', [ArticlesController::class,'cetak_pdf'])->name('cetak_pdf');
